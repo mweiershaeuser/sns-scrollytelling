@@ -18,7 +18,7 @@
     "start": "live-server"
   },
   "devDependencies": {
-    "gsap": "^3.11.4",
+    "gsap": "3.11.4",
     "live-server": "^1.2.2"
   }
 }
