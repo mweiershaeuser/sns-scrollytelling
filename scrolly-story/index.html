@@ -4,17 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="style.css" />
-
     <title>Scrollytelling</title>
   </head>
   <body>
-    <h1>Hello World! two</h1>
 
-    <div class="test">
-      <img src="assets/apple-1.svg" style="width: 100px" />
-    </div>
+    <section id="scene-intro">
+      <div class="content">
+        <span class="text">Was ist eigentlich</span>
+          <span class="logo-container">
+            <img class="logo" id="logo" src="./assets/batta-logo.svg" alt="Batta Logo">
+          </span>
+        <span class="text">?</span>
+      </div>
+    </section>
+
+    <section id="scene-tree">
+      <img class="tree" src="./assets/tree.svg" alt="Tree Leafs">
+      <div class="content">
+        <img class="apple" src="./assets/apple-1.svg" alt="Apple">
+        <img class="banana" src="./assets/banana-1.svg" alt="Banana">
+
+        <div class="dialog">
+          <div class="speach spb-1">
+            <p>Hey Banane, ist dir nicht kalt? </p>
+          </div>
+
+          <div class="speach right spb-2">
+            <p>Hey Apfel, ja schon, aber ich habe doch keine Arme. </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="../libs/gsap/gsap.min.js"></script>
     <script src="../libs/gsap/ScrollTrigger.min.js"></script>
