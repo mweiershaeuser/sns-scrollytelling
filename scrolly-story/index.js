@@ -4,12 +4,12 @@ gsap.timeline({
       trigger: "#scene-intro",
       start: "top top",
       end: "bottom center",
-      scrub: true,
+      scrub: .5,
       pin: true
     }
   })
-    .to("#scene-intro .text",  { opacity: 0 })
-    .to("#scene-intro .logo",  { scale: 2, xPercent: -170}, "<");
+  .to("#scene-intro .text",  { opacity: 0 })
+  .to("#scene-intro .logo",  { scale: 2, xPercent: -170}, "<");
 
 // Scene 1
 gsap.timeline({
@@ -17,13 +17,63 @@ gsap.timeline({
       trigger: "#scene-tree",
       start: "center center",
       end: "bottom center",
-      scrub: true,
+      scrub: .5,
       pin: true
     }
   })
   .from("#scene-tree .apple",  { y: -150 })
   .from("#scene-tree .banana",  { y: -100 }, "<")
-  .to("#scene-tree .spb-1", { display: 'inline-block' })
-  .to("#scene-tree .spb-1", { display: 'none' })
-  .to("#scene-tree .spb-2", { display: 'inline-block' })
-  .to("#scene-tree .spb-2", { display: 'none' })
+  .to("#scene-tree .spb-1", { display: 'inline-block', opacity: 1})
+  .to("#scene-tree .spb-1", { display: 'none', opacity: 0, delay: 500 })
+  .to("#scene-tree .spb-2", { display: 'inline-block', opacity: 1})
+  .to("#scene-tree .spb-2", { display: 'none', opacity: 0, delay: 500 })
+  .to("#scene-tree .spb-3", { display: 'inline-block', opacity: 1})
+  .to("#scene-tree .spb-3", { display: 'none', opacity: 0, delay: 500 })
+  .to("#scene-tree .spb-4", { display: 'inline-block', opacity: 1})
+  .to("#scene-tree .spb-4", { display: 'none', opacity: 0, delay: 500 })
+  .to("#scene-tree .apple", { display: 'none'})
+  .to("#scene-tree .apple-falling", { display: 'block'})
+  .to("#scene-tree .apple-falling", { y: window.innerHeight, duration: 200 })
+  .to("#scene-tree .apple-falling", { opacity: 0 })
+  .to("#scene-tree .apple", { display: 'none'})
+
+// Scene 2
+gsap.timeline({
+    scrollTrigger: {
+      trigger: "#scene-apple-falling",
+      start: "center center",
+      end: "bottom center",
+      scrub: .5,
+      pin: true
+    }
+  })
+  .to("#scene-apple-falling .spb-1", { display: 'inline-block', opacity: 1})
+  .to("#scene-apple-falling .spb-1", { display: 'none', opacity: 0, delay: 500 })
+  .to("#scene-apple-falling .apple", { display: 'none'})
+  .to("#scene-apple-falling .apple-phone", { display: 'block'}, "<")
+  .from("#scene-apple-falling .phone-container", { x: window.innerWidth, duration: 500 })
+  .to("#scene-apple-falling .spb-2", { display: 'inline-block', opacity: 1})
+  .to("#scene-apple-falling .spb-2", { display: 'none', opacity: 0, delay: 500 })
+  .to("#scene-apple-falling .phone-container", { y: -window.innerHeight, duration: 500 })
+  .to("#scene-apple-falling .apple-phone", { y: -window.innerHeight, duration: 500 }, "<")
+
+// Scene 3
+gsap.timeline({
+  scrollTrigger: {
+    trigger: "#scene-tree-banana",
+    start: "center center",
+    end: "bottom center",
+    scrub: .5,
+    pin: true
+  }
+})
+.to("#scene-tree-banana .tree", {display: 'block'})
+.from("#scene-tree-banana .tree", { y: -window.innerHeight / 2}, "<")
+.to("#scene-tree-banana .banana", {display: 'block'})
+.from("#scene-tree-banana .banana", { y: -window.innerHeight / 2}, "<")
+.to("#scene-tree-banana .spb-1", { display: 'inline-block', opacity: 1})
+.to("#scene-tree-banana .spb-1", { display: 'none', opacity: 0, delay: 500 })
+.to("#scene-tree-banana .spb-2", { display: 'inline-block', opacity: 1})
+.to("#scene-tree-banana .spb-2", { display: 'none', opacity: 0, delay: 500 })
+.to("#scene-tree-banana .spb-3", { display: 'inline-block', opacity: 1})
+.to("#scene-tree-banana .spb-3", { display: 'none', opacity: 0, delay: 500 })
