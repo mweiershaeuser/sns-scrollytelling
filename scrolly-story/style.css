@@ -30,7 +30,7 @@ body {
   height: 1em;
 }
 
-#scene-tree .dialog, #scene-apple-falling .dialog, #scene-tree-banana .dialog {
+.dialog {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -154,6 +154,69 @@ body {
   top: 25%;
   right: 20%;
   display: none;
+}
+
+#scene-cherry {
+  height: 100vh;
+  position: relative;
+}
+
+#scene-cherry .grass {
+  position: absolute;
+  bottom: 0;
+}
+
+#scene-cherry .cherry {
+  position: absolute;
+  width: 25%;
+  bottom: 20%;
+  left: 15%;
+}
+
+#scene-cherry .cherry.no-hat {
+  display: none;
+}
+
+#scene-cherry .banana {
+  position: absolute;
+  width: 25%;
+  top: 25%;
+  right: 20%;
+  z-index: 1;
+}
+
+#scene-cherry .banana.hat {
+  display: none;
+}
+
+#scene-cherry .apple {
+  position: absolute;
+  width: 17%;
+  bottom: 8%;
+  left: 15%;
+}
+
+#scene-end {
+  height: 100vh;
+  position: relative;
+  background: #2ecc71;
+}
+
+#scene-end h2 {
+  display: block;
+  font-size: 4em;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+#scene-end h2.end {
+  opacity: 0;
 }
 
 
