@@ -133,8 +133,17 @@ body {
   transform: translateX(-50%) translateY(-50%);
   background: #333;
   border-radius: 1rem;
-  padding: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
+
+#batta-video {
+  height: 100%;
+}
+
+
+
 
 #scene-tree-banana {
   height: 100vh;

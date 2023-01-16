@@ -38,11 +38,13 @@ gsap.timeline({
   .to("#scene-tree .apple", { display: 'none'})
 
 // Scene 2
+const battaVideo = document.getElementById("batta-video");
+
 gsap.timeline({
     scrollTrigger: {
       trigger: "#scene-apple-falling",
       start: "center center",
-      end: "bottom center",
+      end: "+=5000",
       scrub: .5,
       pin: true
     }
@@ -52,7 +54,16 @@ gsap.timeline({
   .to("#scene-apple-falling .apple", { display: 'none'})
   .to("#scene-apple-falling .apple-phone", { display: 'block'}, "<")
   .from("#scene-apple-falling .phone-container", { x: window.innerWidth, duration: 500 })
-  .to("#scene-apple-falling .spb-2", { display: 'inline-block', opacity: 1})
+  .to("#scene-apple-falling .phone-container", { duration: 2000, scrollTrigger: {
+      trigger: "#batta-video",
+      start: "center center",
+      end: "+=3000",
+      onUpdate: (animation) => {
+        battaVideo.currentTime = animation.progress / 10 * 100;
+      }
+    }
+  })
+  .to("#scene-apple-falling .spb-2", { display: 'inline-block', opacity: 1}, ">")
   .to("#scene-apple-falling .spb-2", { display: 'none', opacity: 0, delay: 500 })
   .to("#scene-apple-falling .phone-container", { y: -window.innerHeight, duration: 500 })
   .to("#scene-apple-falling .apple-phone", { y: -window.innerHeight, duration: 500 }, "<")
