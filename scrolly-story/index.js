@@ -16,7 +16,7 @@ gsap.timeline({
     scrollTrigger: {
       trigger: "#scene-tree",
       start: "center center",
-      end: "bottom center",
+      end: "+=3000",
       scrub: .5,
       pin: true
     }
@@ -100,7 +100,7 @@ gsap.timeline({
   scrollTrigger: {
     trigger: "#scene-cherry",
     start: "center center",
-    end: "bottom center",
+    end: "+=9000",
     scrub: .5,
     pin: true
   }
