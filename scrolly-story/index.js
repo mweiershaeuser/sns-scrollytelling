@@ -54,12 +54,12 @@ gsap.timeline({
   .to("#scene-apple-falling .apple", { display: 'none'})
   .to("#scene-apple-falling .apple-phone", { display: 'block'}, "<")
   .from("#scene-apple-falling .phone-container", { x: window.innerWidth, duration: 500 })
-  .to("#scene-apple-falling .phone-container", { duration: 5000, scrollTrigger: {
+  .to("#scene-apple-falling .phone-container", { duration: 6000, scrollTrigger: {
       trigger: "#batta-video",
       start: "center center",
-      end: "+=15000",
+      end: "+=14000",
       onUpdate: (animation) => {
-        battaVideo.currentTime = animation.progress * 45;
+        battaVideo.currentTime = animation.progress * 47;
       }
     }
   })
