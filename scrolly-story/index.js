@@ -44,7 +44,7 @@ gsap.timeline({
     scrollTrigger: {
       trigger: "#scene-apple-falling",
       start: "center center",
-      end: "+=5000",
+      end: "+=15000",
       scrub: .5,
       pin: true
     }
@@ -54,12 +54,12 @@ gsap.timeline({
   .to("#scene-apple-falling .apple", { display: 'none'})
   .to("#scene-apple-falling .apple-phone", { display: 'block'}, "<")
   .from("#scene-apple-falling .phone-container", { x: window.innerWidth, duration: 500 })
-  .to("#scene-apple-falling .phone-container", { duration: 2000, scrollTrigger: {
+  .to("#scene-apple-falling .phone-container", { duration: 5000, scrollTrigger: {
       trigger: "#batta-video",
       start: "center center",
-      end: "+=3000",
+      end: "+=15000",
       onUpdate: (animation) => {
-        battaVideo.currentTime = animation.progress / 10 * 100;
+        battaVideo.currentTime = animation.progress * 45;
       }
     }
   })
@@ -73,7 +73,7 @@ gsap.timeline({
   scrollTrigger: {
     trigger: "#scene-tree-banana",
     start: "center center",
-    end: "bottom center",
+    end: "+=3000",
     scrub: .5,
     pin: true
   }
