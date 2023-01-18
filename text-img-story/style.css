@@ -6,3 +6,54 @@
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
+
+.header-img {
+  width: 100%;
+}
+
+.text-img-story {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem 5rem;
+}
+
+.text-img-story p {
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.text-only {
+  padding: 3rem 1.5rem 3rem 1.5rem;
+}
+
+.text-img-group {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 3rem;
+}
+
+.story-img-container {
+  width: 50%;
+  min-width: 50%;
+
+  padding: 0rem 1.5rem;
+}
+
+.story-text {
+  padding: 0rem 1.5rem;
+}
+
+.story-img {
+  width: 100%;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
